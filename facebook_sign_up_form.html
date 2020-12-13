@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Sign Up page</title>
+    <style>
+        a:link {
+        text-decoration: none;
+        }
+
+        h1 {
+            margin-left: 3px;
+            font-size: 35px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #subtitle {
+            margin-left: 3px;
+            font-size: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(120, 120, 120)
+        }
+
+        input[type=text] {
+            width: 250px;
+            height: 45px;
+            padding: 6px 20px;
+            margin: 4px 3px;
+            box-sizing: border-box;
+            background-color:rgb(233, 233, 245);
+            border-radius: 4px;
+            border-width: 1px;
+            border-color: rgb(173, 169, 194);
+
+        }
+
+        input[type="email"], input[type="password"] {
+            width: 508px;
+            height: 45px;
+            padding: 6px 20px;
+            margin: 4px 3px;
+            box-sizing: border-box;
+            background-color:rgb(233, 233, 245);
+            border-radius: 4px;
+            border-width: 1px;
+            border-color: rgb(173, 169, 194);
+
+        }
+
+        ::placeholder {
+            font-size: 17px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(173, 169, 194);
+
+        }
+
+        .label {
+            margin-left: 3px;
+            color: rgb(102, 102, 102)
+        }
+
+        input[type="month"], input[type="number"] {
+            width: 163px;
+            height: 45px;
+            padding: 6px 20px;
+            margin: 4px 3px;
+            box-sizing: border-box;
+            border-radius: 4px;
+            border-width: 1px;
+            border-color: rgb(173, 169, 194);
+            font-size: 16px;
+        }
+
+        #small {
+            margin-right: 1000px;
+            color:rgb(102, 102, 102)
+        }
+
+        .radio {
+            width: 163px;
+            height: 45px;
+            padding: 11px 43.5px;
+            margin: 4px 3px;
+            border: 1px solid grey;
+            border-radius: 4px;
+            font-size: 18px;
+            text-align: left;
+        }
+
+        #button {
+            margin-left: 135px;
+            padding: 18px 70px 0;
+            border: 1px solid #09a817;
+            background-color: #09a817;
+            border-radius: 8px;
+            background-color:;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+        }
+            
+        #button:hover {
+            background-color: #3e8e41}
+        
+    </style>
+</head>
+<body>
+    <h1>Sign Up</h1>
+    <p id="subtitle">It's quick and easy.</p><hr>
+    <form action="/sign_up_page.php" method="POST">
+        <input type="text" name="firstName" placeholder="First name" required>
+        <input type="text" name="lastName" placeholder="Last name" required><br>
+        <input type="email" name="email" placeholder="Mobile number or email" required><br>
+        <input type="password" name="password" placeholder="New password" required><br>
+        <p class="label">Birthday<span style="margin-left:4px;"><a href=
+        "https://www.facebook.com/privacy/explanation/" title="Click for more information" target="_blank">&#10068;</a></span></p>
+        <input type="month" name="month" required>
+        <input type="number" name="date" min=1 max=31 value="13" required>
+        <input type="number" name="year" min="1905" max="2020" value="2020" required>
+        <p class="label">Gender<span style="margin-left:4px;" title="Click for more information">&#10068;</span></p>
+        <span class="radio"><label for="female">Female</label>
+        <input type="radio" name="gender" value="female"></span>
+        <span class="radio"><label for="male">Male</label>
+        <input type="radio" name="gender" value="male"></span>
+        <span class="radio"><label for="custom">Custom</label>
+        <input type="radio" name="gender" value="custom"></span>
+    </form>
+    <p id="small"><small>By clicking Sign Up, you agree to our <a href="https://www.facebook.com/legal/terms/update" target="_blank">
+    Terms,</a><a href="https://www.facebook.com/about/privacy/update" target="_blank"> Data Policy<a> and 
+    <a href="https://www.facebook.com/policies/cookies/" target="_blank">Cookies Policy.</a> You may receive SMS Notifications
+    from us and can opt out any time.</small></p>
+    <input id="button" type="button" value="Sign Up"></input>
+</body>
+</html>
